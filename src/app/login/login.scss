@@ -1,0 +1,73 @@
+:host {
+	position: relative;
+}
+
+.login-overlay {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 20;
+	pointer-events: auto;
+}
+
+.login-card {
+	width: min(420px, 90%);
+	background: rgba(255, 255, 255, 0.92);
+	backdrop-filter: blur(6px) saturate(120%);
+	border-radius: 12px;
+	padding: 1.25rem 1.5rem;
+	box-shadow: 0 10px 30px rgba(2,6,23,0.35);
+	color: #111;
+}
+
+.login-card h2 {
+	margin: 0 0 6px 0;
+	font-size: 1.5rem;
+}
+.login-card .subtitle {
+	margin: 0 0 12px 0;
+	color: #555;
+	font-size: 0.95rem;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin-bottom: 0.85rem;
+}
+.field span {
+	font-size: 0.8rem;
+	color: #444;
+}
+.field input {
+	padding: 0.5rem 0.6rem;
+	border-radius: 8px;
+	border: 1px solid rgba(0,0,0,0.08);
+	outline: none;
+	font-size: 0.95rem;
+}
+.field input:focus {
+	border-color: rgba(80, 80, 255, 0.6);
+	box-shadow: 0 0 0 4px rgba(80,80,255,0.06);
+}
+
+button[type="submit"] {
+	width: 100%;
+	padding: 0.65rem;
+	border-radius: 10px;
+	border: 0;
+	background: linear-gradient(90deg, #6c63ff, #ff5ca8);
+	color: white;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.hint {
+	margin-top: 0.8rem;
+	font-size: 0.82rem;
+	color: #666;
+}

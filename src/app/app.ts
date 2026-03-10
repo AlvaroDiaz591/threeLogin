@@ -1,7 +1,6 @@
 import { Component, ElementRef, AfterViewInit, ViewChild, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-// Import dinámico de Three.js será usado en runtime (evita errores en SSR)
 
 @Component({
   selector: 'app-root',
@@ -19,8 +18,6 @@ export class App implements AfterViewInit {
     if (!this.viewer360Ref) return;
 
     const THREE = await import('three');
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     const { OrbitControls } = await import('three/examples/jsm/controls/OrbitControls');
 
     const scene = new THREE.Scene();

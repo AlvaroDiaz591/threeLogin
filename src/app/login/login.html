@@ -1,1 +1,20 @@
-<p>login works!</p>
+<div class="login-overlay">
+	<div class="login-card">
+		<h2>Bienvenido</h2>
+		<p class="subtitle">Accede para continuar</p>
+		<form (ngSubmit)="submit()" #f="ngForm">
+			<label class="field">
+				<span>Email</span>
+				<input name="email" type="email" required [(ngModel)]="model.email" />
+			</label>
+
+			<label class="field">
+				<span>Contraseña</span>
+				<input name="password" type="password" required minlength="3" [(ngModel)]="model.password" />
+			</label>
+
+			<button type="submit" [disabled]="loading || f.invalid">{{ loading ? 'Ingresando...' : 'Ingresar' }}</button>
+		</form>
+		<p class="hint">Usuario de prueba — cualquier credencial funciona</p>
+	</div>
+</div>
