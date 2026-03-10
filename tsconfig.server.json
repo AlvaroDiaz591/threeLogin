@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/server",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "types": ["node", "@angular/ssr/types/node"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@angular/ssr/types"
+    ],
+    "target": "ES2022"
+  },
+  "include": [
+    "src/server.ts"
+  ]
+}
